@@ -1,0 +1,10 @@
+<div class="right">
+
+    <h3>Blogs</h3>
+    <ul>
+        <li *ngFor="let blog of blogs$ | async; let i = index">
+            <a [href]="blog.url" target="_blank">{{ blog.title }}</a> <button (click)="deleteBlog(i)">X</button>
+        </li>
+    </ul>
+
+</div>
